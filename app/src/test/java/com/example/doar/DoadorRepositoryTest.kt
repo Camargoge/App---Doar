@@ -63,7 +63,7 @@ class DoadorRepositoryTest {
     @Test
 
     fun falhaBuscarPorId() = runBlocking {
-        coEvery { apiMock.buscarDoadorPorId("10") } throws Exception("ID não encontrado ou erro de rede")
+        coEvery { apiMock.buscarDoadorPorId("145") } throws Exception("ID não encontrado ou erro de rede")
         val resultado = repository.buscarPorId("145")
         assertEquals(null, resultado) }
 

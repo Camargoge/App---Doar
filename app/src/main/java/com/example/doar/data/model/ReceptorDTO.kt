@@ -8,7 +8,7 @@ data class ReceptorDTO(
     val id: String? = null,
 
     @SerializedName("nome")
-    val nome: String? = null,
+    val nome: String,
 
     @SerializedName("email")
     val email: String,
