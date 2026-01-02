@@ -1,11 +1,10 @@
 package com.example.doar.data.repository
 
 import com.example.doar.data.model.DoadorDTO
+import com.example.doar.data.remote.DoadorApi
 import com.example.doar.data.remote.RetrofitClient
 
-class DoadorRepository {
-
-    private val api = RetrofitClient.doadorApi
+class DoadorRepository (private val api : DoadorApi) {
 
     suspend fun listarDoadores(): List<DoadorDTO>? {
         return try {
